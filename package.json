@@ -1,0 +1,19 @@
+{
+  "name": "social-network",
+  "version": "1.0.0",
+  "description": "Social Networ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirtfieldk/Social-network.git"
+  },
+  "author": "Keith Kirtfield",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirtfieldk/Social-network/issues"
+  },
+  "homepage": "https://github.com/kirtfieldk/Social-network#readme"
+}
