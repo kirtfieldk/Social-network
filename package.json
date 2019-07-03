@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/kirtfieldk/Social-network/issues"
   },
-  "homepage": "https://github.com/kirtfieldk/Social-network#readme"
+  "homepage": "https://github.com/kirtfieldk/Social-network#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "firebaseui": "^4.0.0"
+  }
 }
