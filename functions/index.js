@@ -6,6 +6,9 @@ const app = require("express")();
 firebase.initializeApp(keys);
 
 // ROutes
-require("./routes/routes")(app);
+require("./Routes/routes")(app);
+require("./Routes/SignIn")(app);
+require("./Routes/Image")(app);
+require("./Routes/User")(app);
 
 exports.api = functions.https.onRequest(app);
