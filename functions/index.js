@@ -10,5 +10,7 @@ require("./Routes/routes")(app);
 require("./Routes/SignIn")(app);
 require("./Routes/Image")(app);
 require("./Routes/User")(app);
+require("./Routes/Likes")(app);
+require("./Routes/Delete")(app);
 
 exports.api = functions.https.onRequest(app);

@@ -40,7 +40,7 @@ module.exports = app => {
         handle: req.user.handle,
         userImage: req.user.imageUrl
       };
-      console.log(newComment)
+      console.log(newComment);
       const comment = await db.doc(`/user-post/${req.param.postId}`).get();
       if (comment) {
         await db.collection("comments").add(newComment);
@@ -79,15 +79,17 @@ module.exports = app => {
     const newPost = {
       body: req.body.body,
       handle: req.user.handle,
+      userImg: req.user.imageUrl,
+      likeCount: 0,
+      commentCount: 0,
       date: new Date().toISOString()
     };
     db.collection("user-post")
       .add(newPost)
       .then(doc => {
-        res.json({ msg: `Document ${doc.id} created sussessfully` });
         const resPost = newPost;
         resPost.postId = doc.id;
-        // res.json(resPost);
+        res.json(resPost);
       })
       .catch(err => {
         res.status(500).json({ err: "Bad Event" });
